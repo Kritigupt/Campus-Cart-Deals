@@ -8,7 +8,7 @@ function MyProfile() {
     const [user, setuser] = useState({})
 
     useEffect(() => {
-        let url = API_URL + '/my-profile/' + localStorage.getItem('userId');
+        let url = 'http://localhost:4000/my-profile/' + localStorage.getItem('userId');
         axios.get(url)
             .then((res) => {
                 console.log(res.data)
@@ -31,15 +31,31 @@ function MyProfile() {
                     <thead>
                         <tr>
                             <td> USERNAME </td>
+                            <td>  {user.username} </td>
+                            
+                        </tr>
+                        <tr>
                             <td> EMAIL ID </td>
-                            <td> MoBILE </td>
+                            <td>  {user.email} </td>
+                            
+                        </tr>
+                        <tr>
+                            <td> HOSTEL </td>
+                            <td>  {user.hostel} </td>
+                            
+                        </tr>
+
+                        <tr>
+                            <td> COURSE </td>
+                            <td>  {user.course} </td>
+                            
                         </tr>
                     </thead>
                     <tbody>
 
                         <tr>
-                            <td>  {user.username} </td>
-                            <td>  {user.email} </td>
+                            
+                            <td> MOBILE </td>
                             <td>  {user.mobile} </td>
                         </tr>
                     </tbody>
@@ -48,6 +64,4 @@ function MyProfile() {
         </div>
     )
 }
-
-
 export default MyProfile;

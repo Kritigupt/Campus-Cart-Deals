@@ -1,0 +1,133 @@
+/* body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    width: 100%;
+    height: -webkit-fill-available;
+    min-height: 100%;
+    background-image: url('./image/bgpink.jpg');
+    background-size: cover;
+    background-position-x: center;
+    box-shadow: 0 3000px rgba(204, 0, 255, 0.4) inset;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+} */
+
+
+
+body {
+    width: 100%;
+
+     /* background-image: url('./image/bgpink.jpg');  */
+   
+    background-size: cover;
+    height: 100vh;
+    
+    background-position: center;
+    background-repeat: no-repeat;
+    display :flex;
+ 
+ 
+}
+
+
+
+.heading-wrapper {
+    text-align: center;
+    margin-bottom: 20px;
+    
+}
+
+.heading {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Adjust the font stack as needed */
+    font-size: 2.5em;
+    color: #000; /* Black color */
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-top: -220px;
+    text-align: center;
+    margin-left: 40px;
+}
+
+.wrapper {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    
+}
+
+.link_wrapper {
+    
+    /* margin-bottom: -120px;
+    position: absolute;
+ */
+    position: relative; /* Change to relative positioning */
+    text-align: center;
+
+}
+
+a {
+    display: block;
+    width: 250px;
+    height: 50px;
+    line-height: 50px;
+    font-weight: bold;
+    text-decoration: none;
+    background: #333;
+    text-align: center;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border: 3px solid #333;
+    transition: all .55s;
+}
+
+.icon {
+    width: 50px;
+    height: 50px;
+    border: 3px solid transparent;
+    position: absolute;
+    transform: rotate(45deg);
+    right: 0;
+    top: 0;
+    z-index: -1;
+    transition: all .55s;
+}
+
+.icon svg {
+    width: 30px;
+    position: absolute;
+    top: calc(50% - 15px);
+    left: calc(50% - 15px);
+    transform: rotate(-45deg);
+    fill: #0c0f0d;
+    transition: all .55s;
+}
+
+a:hover {
+    width: 200px;
+    border: 3px solid #202523;
+    background: transparent;
+    color: #161a18;
+}
+
+a:hover + .icon {
+    border: 3px solid #0e0f0e;
+    right: -25%;
+}
+.logo {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+}
+
+.logo img {
+    width: 100px; /* Adjust as needed */
+    height: auto; /* Maintain aspect ratio */
+}

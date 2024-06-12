@@ -2,12 +2,67 @@
     color: red;
 }
 
+.icons {
+    font-size: 32px;
+    height: 32px;
+    width: 32px;
+    color: #ddd;
+    cursor: pointer;
+}
+
+.red-icons {
+    font-size: 32px;
+    height: 32px;
+    width: 32px;
+    color: red;
+    cursor: pointer;
+}
+
 .icon-con {
     position: absolute;
     top: 0;
     right: 0;
     border-radius: 50%;
     padding: 7px;
-    background-color: #fff;
+    background-color: #ebb8d8;
     margin: 7px;
+}
+.links{
+    text-decoration:none ;
+    font-size: 24px ;
+    color: blue ;
+    font-weight:bold ;
+}
+
+/* .link-to-add-product {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #002f34;
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    z-index: 999; 
+
+.link-to-add-product:hover {
+    background-color: #005f69;
+} */
+
+.price-text {
+    color: #002f34;
+
+}
+
+.clear-btn {
+    height: 24px;
+    background-color: #002f34;
+    color: #fff;
+    border-radius: 4px;
+    font-size: 12px;
+    outline: none;
+    border: none;
+    padding: 0px 15px;
+    margin-top: 10px;
+    margin-left: 10px;
 }

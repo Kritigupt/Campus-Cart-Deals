@@ -5,7 +5,7 @@ import axios from "axios";
 import Categories from "./Categories";
 import { FaHeart } from "react-icons/fa";
 import './Home.css';
-import API_URL from "../constants";
+// import API_URL from "../constants";
 
 
 function CategoryPage() {
@@ -27,7 +27,7 @@ function CategoryPage() {
     // }, [])
 
     useEffect(() => {
-        const url = API_URL + '/get-products?catName=' + param.catName;
+        const url = 'http://localhost:4000/get-products?catName=' + param.catName;
         axios.get(url)
             .then((res) => {
                 if (res.data.products) {
@@ -45,7 +45,7 @@ function CategoryPage() {
 
     const handleClick = () => {
 
-        const url = API_URL + '/search?search=' + search + '&loc=' + localStorage.getItem('userLoc');
+        const url = 'http://localhost:4000/search?search=' + search + '&loc=' + localStorage.getItem('userLoc');
         axios.get(url)
             .then((res) => {
                 setcproducts(res.data.products);
@@ -78,7 +78,7 @@ function CategoryPage() {
     const handleLike = (productId) => {
         let userId = localStorage.getItem('userId');
 
-        const url = API_URL + '/like-product';
+        const url = 'http://localhost:4000/like-product';
         const data = { userId, productId }
         axios.post(url, data)
             .then((res) => {
@@ -117,7 +117,7 @@ function CategoryPage() {
                                 <div onClick={() => handleLike(item._id)} className="icon-con">
                                     <FaHeart className="icons" />
                                 </div>
-                                <img width="300px" height="200px" src={API_URL + '/' + item.pimage} />
+                                <img width="300px" height="200px" src={'http://localhost:4000/' + item.pimage} />
 
                                 <p className="m-2"> {item.pname}  | {item.category} </p>
                                 <h3 className="m-2 text-danger"> {item.price} </h3>
@@ -137,7 +137,7 @@ function CategoryPage() {
                                 <div onClick={() => handleLike(item._id)} className="icon-con">
                                     <FaHeart className="icons" />
                                 </div>
-                                <img width="250px" height="150px" src={API_URL + '/' + item.pimage} />
+                                <img width="250px" height="150px" src={ 'http://localhost:4000/' + item.pimage} />
                                 <h3 className="m-2 price-text"> Rs. {item.price} /- </h3>
                                 <p className="m-2"> {item.pname}  | {item.category} </p>
                                 <p className="m-2 text-success"> {item.pdesc} </p>

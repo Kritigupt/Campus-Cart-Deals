@@ -3,14 +3,15 @@
 import './index.css';
 import * as React from "react";
 import { createRoot } from "react-dom/client";
-import {configureStore} from '@reduxjs/toolkit';
+
 
 import {
   createBrowserRouter,
   RouterProvider,
-  Route,
-  Link,
+
 } from "react-router-dom";
+import Firstpage from './components/Firstpage';
+import Secondpage from './components/Secondpage';
 import Home from './components/Home';
 import Login from './components/Login';
 import Signup from './components/Signup';
@@ -20,17 +21,21 @@ import ProductDetail from './components/ProductDetail';
 import CategoryPage from './components/CategoryPage';
 import MyProducts from './components/MyProducts';
 import MyProfile from './components/MyProfile';
-
-
-
-
-
-
-
+import Feedback from './components/Feedback';
 const router = createBrowserRouter([
   {
     path: "/",
-    element: (<Home/>),
+    element: (<Firstpage/>),
+  },
+
+  {
+      path: "/Secondpage",
+      element: (<Secondpage/>),
+  },
+
+  {
+     path: "/home",
+     element: (<Home/>),
   },
 
   {
@@ -38,7 +43,6 @@ const router = createBrowserRouter([
     element: (<CategoryPage />),
   },
       
-   
   {
     path: "about",
     element: <div>About</div>,
@@ -46,11 +50,11 @@ const router = createBrowserRouter([
 
   {
     path: "/login",
-    element: (<Login/>),
+    element: (<Login/>),   // this path will redirect to login page
   },
 
   {
-    path: "/signup",
+    path: "/signup",         //This path will redirect to signup page  
     element: (<Signup/>),
   },
 
@@ -63,24 +67,27 @@ const router = createBrowserRouter([
     path: "/liked-products",
     element: (<LikedProducts />),
   },
+
   {
     path: "/my-products",
     element: (<MyProducts />),
   },
+
+  {
+    path: "/feedback",
+    element: (<Feedback />),
+  },
+
   {
     path: "/product/:productId",
     element: (<ProductDetail />),
   },
+
   {
     path: "/my-profile",
     element: (<MyProfile />),
   },
-  
-
-
 ]);
-
-
 createRoot(document.getElementById("root")).render(
   <RouterProvider router={router} />
 );
