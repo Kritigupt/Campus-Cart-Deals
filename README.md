@@ -1,9 +1,11 @@
                                                         CAMPUS CART DEALS 
-User login page
+
 ![image](https://github.com/user-attachments/assets/afa1823d-7e39-44c7-98fa-821ecfcb8ff7)
+User login page
 
 Signup page
 ![image](https://github.com/user-attachments/assets/481ce3bc-fe8e-46ec-9005-48c4ae193ee5)
+
 
 Home page
 ![image](https://github.com/user-attachments/assets/a7ca0942-d6f4-4211-a3f3-c49495233c6e)
